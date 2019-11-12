@@ -179,6 +179,11 @@ namespace Caro
                     GameNotifyOverlay.Visibility = Visibility.Hidden;
                     GameStatus = GAME_RUNNING;
                 }
+                else if (GameStatus == GAME_ENDED)
+                {
+                    if (GameNotifyOverlay.Visibility == Visibility.Visible) GameNotifyOverlay.Visibility = Visibility.Hidden;
+                    else GameNotifyOverlay.Visibility = Visibility.Visible;
+                }
             }
             else if (e.Key == Key.Escape)
             {
