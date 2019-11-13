@@ -87,7 +87,7 @@ namespace Caro
         private void OnPlayerClick(object sender, RoutedEventArgs e)
         {
             Button bt = sender as Button;
-            if (bt.Content == null)
+            if (bt.Content == null && GameStatus == GAME_RUNNING)
             {
                 // Update game state
                 bt.Content = CreatePath(game.PlayerToMove.ID);
